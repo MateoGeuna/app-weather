@@ -36,7 +36,12 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--color-theme);
+    background: var(--color-gradient);
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: var(--color-active);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 nav>ul {
@@ -44,8 +49,6 @@ nav>ul {
     justify-content: space-between;
     justify-content: center;
 }
-
-/*nav li {}*/
 
 nav li a {
     display: block;
@@ -55,6 +58,8 @@ nav li a {
     font-size: 1em;
     font-weight: bold;
     color: var(--color-active);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 nav li.current-page a {
@@ -98,14 +103,26 @@ main section {
     justify-content: space-around;
 }
 
+main button {
+    background-color: var(--color-theme);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
 footer {
     position: fixed;
     bottom: 0px;
-    background: var(--color-theme);
+    background: var(--color-gradient);
     width: 100%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-color: var(--color-active);
+    
 }
 
 footer p {
@@ -114,7 +131,10 @@ footer p {
 }
 
 main p {
-    margin-bottom: 16px;
+    margin-bottom: 0px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 /* Media Query: Estilos a aplicar sólo en pantallas mayores a 400px */
