@@ -73,7 +73,7 @@ main {
     overflow: auto;
     padding: 16px;
     padding-bottom: 60px;
-    height: calc (100% - 120px);
+    height: calc(100% - 120px);
 }
 
 h1 {
@@ -101,6 +101,7 @@ h3 {
 main section {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 main button {
@@ -150,3 +151,28 @@ main p {
     }
 }
 
+div.message.success {
+    background-color: #28a745;
+    margin-top: 25px;
+}
+
+
+div.message.error {
+    background-color: #dc3545;
+}
+
+div.message.warning {
+    background-color: #ffc107;
+}
+
+div.message {
+    margin: 15px;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 390px;
+}
+
+div.message p {
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+section form div label{
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+section form div input,
+section form div textarea {
+    width: 100%;
+    border-radius: 5px
+}
+
+section form div:first-child{
+    margin-top: 15px;
+}
+
+section form div.button {
+    text-align: center;
+}
+
+main section form {
+    width: 250px;
+}
+
+main section{
+    flex-direction: column;
+}
+
+section form div button {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}

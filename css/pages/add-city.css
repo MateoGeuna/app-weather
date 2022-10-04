@@ -1,0 +1,29 @@
+main section {
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+form {
+    display: contents;
+}
+
+form input {
+    margin-top: 5px;
+    margin-bottom: -10px;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+}
+
+button {
+    width: 70px;
+    height: 30px;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
