@@ -153,7 +153,6 @@ main p {
 
 div.message.success {
     background-color: #28a745;
-    margin-top: 25px;
 }
 
 
@@ -171,6 +170,10 @@ div.message {
     border-radius: 20px;
     padding: 10px;
     width: 390px;
+}
+
+div.message:first-of-type {
+    margin-top: 25px;
 }
 
 div.message p {

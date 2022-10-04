@@ -8,6 +8,8 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/add-city.css">
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/add-city.js" defer></script>
 </head>
 
 <body>
@@ -30,19 +32,13 @@
         <section>
             <!-- Sección donde se debe colocar el formulario, con el select y el
 botón de consultar -->
-            <form action="">Ingrese la ciudad a agregar:
-                <input type="text"><br>
-                <button>Agregar</button>
+            <form action="javascript:void(0);">Ingrese la ciudad a agregar:
+                <input id="inputCity" type="text"><br>
+                <button onclick="agregarNuevaCiudad()">Agregar</button>
             </form>
-            <div class="message success">
-                <p>Ciudad agregada con éxito</p>
-            </div>
-            <div class="message error">
-                <p>Error: La ciudad ingresada no se encuentra en la API o se produjo un error al consultar</p>
-            </div>
-            <div class="message warning">
-                <p>La ciudad ingresada ya se encuentra almacenada</p>
-            </div>
+            
+        </section>
+        <section id="errors">
         </section>
     </main>
     <footer>
