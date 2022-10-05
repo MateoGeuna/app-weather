@@ -6,8 +6,8 @@ function agregarNuevaCiudad() {
     // Valido si el usuario ingreso algo
     if(inputText === "") {
         //motrar el error
-        showMessageError("INGRESE UNA CIUDAD", "error");
-
+        showMessageError("INGRESE UNA CIUDAD", "error", 'section-result-add-city');
+        inputCity.value = "";
         return;
     }
 
@@ -15,12 +15,15 @@ function agregarNuevaCiudad() {
     const cityStorage = getCitiesFromLocalStorage();
     for (let a = 0; a < cityStorage.length; a++) {
         if (inputText === cityStorage[a]) {
-            showMessageError("LA CIUDAD YA HA SIDO INGRESADA", "warning")
-            return
+            showMessageError("LA CIUDAD YA HA SIDO INGRESADA", "warning", 'section-result-add-city');
+            inputCity.value = "";
+            return;
         }
+        
     }
-
+    
     // Recién una vez que paso todas las validaciones, guardo la ciudad
     addNewCityToLocalStorage(inputText);
-    showMessageError("CIUDAD AGREGADA CORRECTAMENTE", "success");
+    showMessageError("CIUDAD AGREGADA CORRECTAMENTE", "success", 'section-result-add-city');
+    inputCity.value = "";
 }
