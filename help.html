@@ -36,33 +36,31 @@
             Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego Seleccionar la Ciudad en cuestión desde la página <a href="index.html">Clima</a>.
         </p>
         <section>
-            <form action="">
+            <form action="javascript:void(0)">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text">
+                    <input type="text" id="nameInput" oninput="handleInputName()">
                 </div>
                 <div>
                     <label for="email">Email:</label>
-                    <input type="email">
+                    <input type="email" id="emailInput">
                 </div>
                 <div>
                     <label for="mensaje">Mensaje:</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="" id="messageInput" cols="30" rows="10"></textarea>
                 </div>
                 <div class="button">
-                    <button>Limpiar</button>
-                    <button>Enviar</button>
-                </div>
-                
+                    <button type="reset" id="limpiar">Limpiar</button>
+                    <button  onclick="enviarFormulario()">Enviar</button>
+                </div>    
             </form>
-            <div class="message error">
-                <p>Ingrese por favor un Email válido</p>
+            <div id="message_error">
             </div>
         </section>
     </main>
     <footer>
         <p>
-            Desarrollado con ♥ - LC2
+            Desarrollado con ♥ - Mateo Geuna
         </p>
     </footer>
 </body>
