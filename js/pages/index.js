@@ -23,13 +23,14 @@ function consultarClima() {
         showMessageError('Ingrese una ciudad', 'error', 'section-weather-result');
         return 
     }
-    
+    showMessageError('CONSULTANDO...', 'warning', 'section-weather-result');
     requestApiOpenWeatherMap(selectedCity)
         .then(dataCityWeather => {
             showCardCityWeather(dataCityWeather);
+            //showMessageError('CIUDAD ENCONTRADA', 'success', 'section-weather-result')
+        }).catch((error) => {
+            showMessageError('CIUDAD NO ENCONTRADA', 'error', 'section-weather-result');
         });
-    // TO-DO: MANEJAR ERROR
-    showMessageError('CONSULTANDO...', 'success', 'section-weather-result');
 }
 
 function showCardCityWeather(dataCityWeather) {
