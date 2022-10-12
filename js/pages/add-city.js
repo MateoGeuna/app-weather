@@ -18,7 +18,17 @@ function agregarNuevaCiudad() {
         
     }
     
-    addNewCityToLocalStorage(inputText);
-    showMessageError("CIUDAD AGREGADA CORRECTAMENTE", "success", 'section-result-add-city');
-    inputCity.value = "";
+    showMessageError ('CARGANDO...', 'warning', 'section-result-add-city');
+    requestApiOpenWeatherMap(inputText)
+        .then(dataCityWeather => {
+            if (dataCityWeather.cod == 200) {
+                addNewCityToLocalStorage(inputText);
+                inputCity.value = "";
+                showMessageError("CIUDAD AGREGADA CORRECTAMENTE", "success", 'section-result-add-city');
+            } else {
+                showMessageError('CIUDAD NO ENCONTRADA', 'error', 'section-result-add-city');
+            }
+        }).catch((error) => {
+            showMessageError('OCURRIO UN ERROR DE CONEXION INTENTE MAS TARDE', 'warning', 'section-result-add-city');
+        });
 }
