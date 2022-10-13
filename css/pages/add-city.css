@@ -1,7 +1,6 @@
 main section {
     text-align: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     flex-direction: column;
     font-weight: 500;
     font-size: 13px;
