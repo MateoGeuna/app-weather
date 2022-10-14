@@ -7,6 +7,10 @@ function agregarNuevaCiudad() {
         inputCity.value = "";
         return;
     }
+    
+    if (inputText == "godeken") {
+        inputText = "gödeken";
+    }
 
     const cityStorage = getCitiesFromLocalStorage();
     for (let a = 0; a < cityStorage.length; a++) {
