@@ -23,7 +23,7 @@ function agregarNuevaCiudad() {
     }
     
     showMessageError ('CARGANDO...', 'warning', 'section-result-add-city');
-    requestApiOpenWeatherMap(inputText)
+    requestApiOpenWeatherMapCurrent(inputText)
         .then(dataCityWeather => {
             if (dataCityWeather.cod == 200) {
                 addNewCityToLocalStorage(inputText);

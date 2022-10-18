@@ -24,7 +24,7 @@ function consultarClima() {
         return 
     }
     showMessageError('CONSULTANDO...', 'warning', 'section-weather-result');
-    requestApiOpenWeatherMap(selectedCity)
+    requestApiOpenWeatherMapCurrent(selectedCity)
         .then(dataCityWeather => {
             showCardCityWeather(dataCityWeather);
             //showMessageError('CIUDAD ENCONTRADA', 'success', 'section-weather-result')

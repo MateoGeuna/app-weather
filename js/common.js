@@ -16,7 +16,7 @@ function addNewCityToLocalStorage(newCity) {
     localStorage.setItem("CITIES", JSON.stringify(cities));
 }
 
-function showMessageError(message, type, idElement){
+function showMessageError(message, type, idElement) {
     document.getElementById(idElement).innerHTML = `
         <div class="message ${type}">
             <p>${message}</p>
@@ -24,7 +24,7 @@ function showMessageError(message, type, idElement){
     `;
 }
 
-function requestApiOpenWeatherMap(cityName) {
+function requestApiOpenWeatherMapCurrent(cityName) {
     return new Promise((resolve, reject) => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKeyOpenWeatherMap}&units=metric&lang=es`)
             .then(dataApi => dataApi.json())
