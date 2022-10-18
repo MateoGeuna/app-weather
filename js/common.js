@@ -1,4 +1,4 @@
-const apiKeyOpenWeatherMap = "eb7bb8512b2b45594aa39a158de79fb4"; 
+const apiKeyOpenWeatherMap = "eb7bb8512b2b45594aa39a158de79fb4";
 
 function getCitiesFromLocalStorage() {
     let cities = localStorage.getItem("CITIES");
@@ -27,6 +27,15 @@ function showMessageError(message, type, idElement) {
 function requestApiOpenWeatherMapCurrent(cityName) {
     return new Promise((resolve, reject) => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKeyOpenWeatherMap}&units=metric&lang=es`)
+            .then(dataApi => dataApi.json())
+            .then(dataJson => resolve(dataJson))
+            .catch(e => reject(e));
+    });
+}
+
+function requestApiOpenWeatherMapExtended(cityName) {
+    return new Promise((resolve, reject) => {
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKeyOpenWeatherMap}&units=metric&lang=es`)
             .then(dataApi => dataApi.json())
             .then(dataJson => resolve(dataJson))
             .catch(e => reject(e));

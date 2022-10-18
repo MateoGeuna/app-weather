@@ -1,0 +1,20 @@
+#time-aprox {
+    display: none;
+    background: var(--color-gradient);
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 8px;
+}
+
+section#section-weather-result {
+    flex-wrap: wrap;
+}
+
+section#section-weather-result:last-child {
+    margin-bottom: 30px;
+}
